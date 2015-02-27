@@ -1,0 +1,24 @@
+!!!
+%html
+  %head
+    %title UserProgressApp
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    .container
+      .logo
+        = link_to "g7", root_path
+      - if current_user
+        .auth
+          = current_user.email
+          |
+          \#{link_to "Logout", signout_path}
+      - else
+        .auth
+          = link_to "Login", signin_path
+          |
+          \#{link_to "Register", new_registration_path}
+    %main
+      .container
+        = yield

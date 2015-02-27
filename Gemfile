@@ -6,6 +6,8 @@ gem 'haml-rails', '~> 0.8.2'
 
 gem 'rails_12factor'
 
+gem 'bcrypt'
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
