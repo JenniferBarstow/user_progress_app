@@ -11,7 +11,7 @@
         = link_to "g7", root_path
       - if current_user
         .auth
-          = current_user.email
+          = current_user.user_name
           |
           \#{link_to "Logout", signout_path}
       - else
